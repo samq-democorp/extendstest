@@ -1,13 +1,18 @@
 {
   "settingsInheritedFrom": "samq-democorp/whitesource-config@main",
-    "remediateSettings": {
+  "remediateSettings": {
     "workflowRules": {
-      "enabled": false
+      "enabled": true,
+      "minVulnerabilitySeverity": "LOW"
     },
     "enableRenovate": true,
     "extends": [
        "config:base",
-       "github>whitesource/merge-confidence:beta"
+       "github>whitesource/merge-confidence:beta",
+       "github>mend-toolkit/mend-examples//Repo-Integration/Renovate/smart-merge"
       ]
-  }
+  },
+  "leastVulnerablePackageSettings": {
+    "enabled": true
+    }
 }
